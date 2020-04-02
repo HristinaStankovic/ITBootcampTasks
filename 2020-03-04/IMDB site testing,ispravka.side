@@ -1,0 +1,1062 @@
+{
+  "id": "fe3ce7eb-f88d-4f87-8d95-42eecd984335",
+  "version": "2.0",
+  "name": "IMDB site testing",
+  "url": "https://www.imdb.com",
+  "tests": [{
+    "id": "56a8b531-58a6-4480-a4ea-07e44d3f98c9",
+    "name": "1.\tVerify that user can add a movie to watchlist",
+    "commands": [{
+      "id": "9d7b889e-189c-4a2c-8c50-8cefc69434e2",
+      "comment": "",
+      "command": "open",
+      "target": "/?ref_=nv_home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef649d43-b4fc-43d8-afd2-cd62550c0fc5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1357x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b519838-f1af-45f5-82a7-546fdb47b117",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar__user-menu-toggle__name",
+      "targets": [
+        ["css=.navbar__user-menu-toggle__name", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/div/label[2]/div/span", "xpath:idRelative"],
+        ["xpath=//label[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Hristina')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "afe50805-8938-4f2d-80c4-0b1f10d907d4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Your watchlist",
+      "targets": [
+        ["linkText=Your watchlist", "linkText"],
+        ["css=.imdb-header__account-menu > .ipc-list__item:nth-child(4)", "css:finder"],
+        ["xpath=//span[@id='navUserMenu-contents']/ul/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/list/watchlist?ref_=nv_usr_wl')])[2]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/span/ul/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Your watchlist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f8441c5-0024-411f-b6dd-d4099f7c2d6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button-title",
+      "targets": [
+        ["css=.button-title", "css:finder"],
+        ["xpath=//div[@id='center-1-react']/div/div/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e270504b-5c58-4685-ad8c-c6c3d6c0d64b",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-list-search",
+      "targets": [
+        ["id=add-to-list-search", "id"],
+        ["css=#add-to-list-search", "css:finder"],
+        ["xpath=//input[@id='add-to-list-search']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div[5]/div/span[2]/input", "xpath:idRelative"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e08c2d8-fc61-46f2-a274-6cbe86d4f40d",
+      "comment": "",
+      "command": "type",
+      "target": "id=add-to-list-search",
+      "targets": [
+        ["id=add-to-list-search", "id"],
+        ["css=#add-to-list-search", "css:finder"],
+        ["xpath=//input[@id='add-to-list-search']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div[5]/div/span[2]/input", "xpath:idRelative"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": "t"
+    }, {
+      "id": "6b51072f-06da-4bad-b9b3-192bc8f8ecd9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=T-34 (2018)",
+      "targets": [
+        ["linkText=T-34 (2018)", "linkText"],
+        ["css=.search_item:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='add-to-list-search-results']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'title/tt8820590/')]", "xpath:href"],
+        ["xpath=//span[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'T-34 (2018)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "088a4cfe-c5f8-47e3-8c3e-2e95722a7b8e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a0310f14-44c5-4795-b43e-eaa367593c40",
+    "name": "6. Verify that user can check the Oscar events history arranged by year",
+    "commands": [{
+      "id": "ab89271f-df24-445f-9774-c4201212889b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "effcfa4a-c947-4656-90a5-4edaa63a6b4e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1357x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f89258e6-ee0a-46bf-8fe1-1c964da36756",
+      "comment": "",
+      "command": "click",
+      "target": "id=imdbHeader-navDrawerOpen--desktop",
+      "targets": [
+        ["id=imdbHeader-navDrawerOpen--desktop", "id"],
+        ["css=#imdbHeader-navDrawerOpen--desktop", "css:finder"],
+        ["xpath=//label[@id='imdbHeader-navDrawerOpen--desktop']", "xpath:attributes"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40209a3a-62db-40cd-bbb8-b47b22b3adf8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Oscars",
+      "targets": [
+        ["linkText=Oscars", "linkText"],
+        ["css=.\\_1K0S44SUv8s7pXTI-caWlb:nth-child(4) .ipc-list__item:nth-child(1)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div[3]/span/div/div/ul/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/oscars/?ref_=nv_ev_acd')]", "xpath:href"],
+        ["xpath=//div[3]/span/div/div/ul/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Oscars')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bafc59b-9dad-414a-8145-eede1428b4d5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Oscars",
+      "targets": [
+        ["linkText=Oscars", "linkText"],
+        ["css=.\\_1K0S44SUv8s7pXTI-caWlb:nth-child(4) .ipc-list__item:nth-child(1)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div[3]/span/div/div/ul/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/oscars/?ref_=nv_ev_acd')]", "xpath:href"],
+        ["xpath=//div[3]/span/div/div/ul/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Oscars')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59596f7a-61e9-4ba5-bd97-f4dbd7b7f0cf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=1994",
+      "targets": [
+        ["linkText=1994", "linkText"],
+        ["css=.event-history-widget__years-row:nth-child(5) > span:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'1994')]", "xpath:link"],
+        ["xpath=//div[@id='right-5-react']/div/div[2]/div[5]/span[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/event/ev0000003/1994/1/?ref_=acd_eh')]", "xpath:href"],
+        ["xpath=//div[5]/span[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'1994')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fde1d645-4521-42c6-a951-7ffd3562eb38",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9b991b64-3724-4b8e-9b6e-cda27c43688c",
+    "name": "8. Verify that the user can see which movies are currently being released in theaters",
+    "commands": [{
+      "id": "564a85f9-7fc7-4830-b86c-7ff57f788d78",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27b55e19-d272-4326-916c-a844589794e1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f4381ef-daf5-4efd-b32e-7bec82ec33c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop > .ipc-button__text",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop > .ipc-button__text", "css:finder"],
+        ["xpath=//label[@id='imdbHeader-navDrawerOpen--desktop']/div", "xpath:idRelative"],
+        ["xpath=//label[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b06b480-1fa6-4f50-8d0f-b8d396447363",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=In Theaters",
+      "targets": [
+        ["linkText=In Theaters", "linkText"],
+        ["css=.nav-link--hideXS:nth-child(7)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div/span/div/div/ul/a[7]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.imdb.com/movies-in-theaters/?ref_=nv_mv_inth')]", "xpath:href"],
+        ["xpath=//a[7]", "xpath:position"],
+        ["xpath=//a[contains(.,'In Theaters')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25165e8a-d55e-45d8-bcf5-501423a5483f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=The Burnt Orange Heresy (2019)",
+      "targets": [
+        ["linkText=The Burnt Orange Heresy (2019)", "linkText"],
+        ["css=.list:nth-child(4) > .list_item:nth-child(5) h4 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'The Burnt Orange Heresy (2019)')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div[2]/div[4]/table/tbody/tr/td[2]/h4/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/title/tt8342680/?ref_=inth_ov_tt')]", "xpath:href"],
+        ["xpath=//div[4]/table/tbody/tr/td[2]/h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'The Burnt Orange Heresy (2019)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2c55bbd-ff88-4169-aa10-da149c5d0516",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9d40d367-31bf-4cb3-9420-66964fca7b32",
+    "name": "9. Verify that the user can rate new movies that have not yet been released",
+    "commands": [{
+      "id": "98af53e0-0a1e-4cf5-8cd8-f0130d8808b5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e2cbc56-7fed-4df6-8ca6-1f7ca28f7ac3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1357x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64ff695b-91c3-425d-85d1-3b5b8570dde5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop > .ipc-button__text",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop > .ipc-button__text", "css:finder"],
+        ["xpath=//label[@id='imdbHeader-navDrawerOpen--desktop']/div", "xpath:idRelative"],
+        ["xpath=//label[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adaf0c77-7ff3-4436-bf93-3c7f8cc03192",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Coming Soon",
+      "targets": [
+        ["linkText=Coming Soon", "linkText"],
+        ["css=.nav-link--hideXS:nth-child(9)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div/span/div/div/ul/a[9]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.imdb.com/coming-soon/?ref_=nv_mv_cs')]", "xpath:href"],
+        ["xpath=//a[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84ee516a-e35f-487b-a2da-caca43fbfcc8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My Spy (2020)",
+      "targets": [
+        ["linkText=My Spy (2020)", "linkText"],
+        ["css=.list_item:nth-child(2) h4 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'My Spy (2020)')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div[2]/div/table/tbody/tr/td[2]/h4/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/title/tt8242084/?ref_=cs_ov_tt')]", "xpath:href"],
+        ["xpath=//td[2]/h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Spy (2020)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "39078ae3-7785-4a6c-9b71-bf16e0e93fba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.star-rating-star",
+      "targets": [
+        ["css=.star-rating-star", "css:finder"],
+        ["xpath=//div[@id='star-rating-widget']/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4966e5b3-cc02-42d0-8fb1-1529000ab60f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.on:nth-child(5)",
+      "targets": [
+        ["css=.on:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='star-rating-widget']/div/div/span/span/a[5]", "xpath:idRelative"],
+        ["xpath=//span/a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05164f66-41f2-404a-9a3c-658dd956b6a9",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4389c944-11b6-477a-b9a1-67798f1fd305",
+    "name": "2.\tVerify that user can search by movie titles (search for movies named “Romeo” and not people named “Romeo”)",
+    "commands": [{
+      "id": "d71c5f5e-e812-4e88-8b91-79ef099b84ff",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6290aeae-ad46-42e9-bdf1-70d0e44b9f78",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdd99ac3-7ea6-4db4-8f61-289a4622b233",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ipc-icon--arrow-drop-down:nth-child(1)",
+      "targets": [
+        ["css=.ipc-icon--arrow-drop-down:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f570747-2fe8-4dfc-8779-63cf3922b9dd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Titles",
+      "targets": [
+        ["linkText=Titles", "linkText"],
+        ["css=.\\_1xTnkpad08eEWkqotpqi4r:nth-child(2)", "css:finder"],
+        ["xpath=//span[@id='navbar-search-category-select-contents']/ul/a[2]", "xpath:idRelative"],
+        ["xpath=//span/ul/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Titles')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "540e40cb-3623-4f15-9192-d8fbe6cd3fb1",
+      "comment": "",
+      "command": "click",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1c185b9-56b1-4e9c-a4f7-899e220f3ae4",
+      "comment": "",
+      "command": "type",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Romeo"
+    }, {
+      "id": "3f06d2e5-3427-4b5a-ad18-3ccbaa741daf",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c8366352-0cba-4307-9930-2aba58907294",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1080afed-491a-4eb5-9f00-d6af7d0ef588",
+    "name": "3.\tVerify that Ranks in “Top rated movies” stay with titles when user hides titles they’ve already seen. (hint: Movie is “seen” when user’s rating is present)",
+    "commands": [{
+      "id": "a4d535bd-9613-4bfc-9357-da0e3129ed01",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf6676a4-839a-4424-8511-05233daa0718",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "524458cf-2554-4d32-969c-e802aa7ad6c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop > .ipc-button__text",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop > .ipc-button__text", "css:finder"],
+        ["xpath=//label[@id='imdbHeader-navDrawerOpen--desktop']/div", "xpath:idRelative"],
+        ["xpath=//label[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1ed6f6c-abe8-4e91-85a1-eced9e66a6ae",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Top Rated Movies",
+      "targets": [
+        ["linkText=Top Rated Movies", "linkText"],
+        ["css=.\\_1K0S44SUv8s7pXTI-caWlb:nth-child(2) .ipc-list__item:nth-child(3)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div/span/div/div/ul/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chart/top/?ref_=nv_mv_250')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Top Rated Movies')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3135ebe-8ede-45c8-83b8-7e02fb8b935f",
+      "comment": "",
+      "command": "click",
+      "target": "id=hide-seen-top-250",
+      "targets": [
+        ["id=hide-seen-top-250", "id"],
+        ["css=#hide-seen-top-250", "css:finder"],
+        ["xpath=//input[@id='hide-seen-top-250']", "xpath:attributes"],
+        ["xpath=//div[@id='sidebar']/div/span/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4fcbb55-21e4-4ce3-aca7-579098920d51",
+      "comment": "",
+      "command": "click",
+      "target": "id=hide-seen-top-250",
+      "targets": [
+        ["id=hide-seen-top-250", "id"],
+        ["css=#hide-seen-top-250", "css:finder"],
+        ["xpath=//input[@id='hide-seen-top-250']", "xpath:attributes"],
+        ["xpath=//div[@id='sidebar']/div/span/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1105c689-bc1e-498a-8f4a-02cb31a7f4ad",
+      "comment": "",
+      "command": "click",
+      "target": "id=hide-seen-top-250",
+      "targets": [
+        ["id=hide-seen-top-250", "id"],
+        ["css=#hide-seen-top-250", "css:finder"],
+        ["xpath=//input[@id='hide-seen-top-250']", "xpath:attributes"],
+        ["xpath=//div[@id='sidebar']/div/span/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e75dd0a-d1ec-4347-a78d-d1105128edaa",
+      "comment": "",
+      "command": "click",
+      "target": "id=hide-seen-top-250",
+      "targets": [
+        ["id=hide-seen-top-250", "id"],
+        ["css=#hide-seen-top-250", "css:finder"],
+        ["xpath=//input[@id='hide-seen-top-250']", "xpath:attributes"],
+        ["xpath=//div[@id='sidebar']/div/span/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6e0309a-fc44-4b55-a9a0-1a7e1e540456",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ed3a39b7-5757-4e59-bf98-8f47b42963bb",
+    "name": "4.\tVerify that Box office sorts movies by Weekend incomes",
+    "commands": [{
+      "id": "c0703383-8f6c-4ea2-b875-531432e33788",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1c9df13-d923-4149-b7c9-5bc053305509",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1357x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb8d2f44-f7ce-45b1-a26e-f4732aed5d07",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop > .ipc-icon",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop > .ipc-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f3456a7-b44a-4a02-a334-2a4990769fd6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Top Box Office",
+      "targets": [
+        ["linkText=Top Box Office", "linkText"],
+        ["css=.\\_1K0S44SUv8s7pXTI-caWlb:nth-child(2) .ipc-list__item:nth-child(6)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div/span/div/div/ul/a[6]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chart/boxoffice/?ref_=nv_ch_cht')]", "xpath:href"],
+        ["xpath=//a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Top Box Office')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f18a56cb-d278-4599-92b1-65df71484f73",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,569)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bc01b2b-8bb9-4788-9423-44bf924d8b75",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=See more box office results at BoxOfficeMojo.com",
+      "targets": [
+        ["linkText=See more box office results at BoxOfficeMojo.com", "linkText"],
+        ["css=#boxoffice > a", "css:finder"],
+        ["xpath=//a[contains(text(),'See more box office results at BoxOfficeMojo.com')]", "xpath:link"],
+        ["xpath=//div[@id='boxoffice']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/offsite/?page-action=offsite-boxofficemojo&token=BCYhpdxzLRgxPjHktWefCnNyM4iupB3qfIWWrEWk7flV01d_ca7BtNoq-R1fJifC0tAP5MabVIPQ%0D%0A6SzmeDGOH1gGjTU4LuMHBM0NoLGRXY5Wlhnd-tjIFIvDn7U9251iDo89zAGyUCM_YDJzrV3fflXS%0D%0AKHSn_H77QxNbcJEmr5KHmazGTrxQthSXMV0WVoaH2JQpC9kCZlxQVI5hTF_4WA_tqQ%0D%0A')]", "xpath:href"],
+        ["xpath=//span/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See more box office results at BoxOfficeMojo.com')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22110c9d-c86a-43a3-b923-e13669ad282b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Weekly",
+      "targets": [
+        ["linkText=Weekly", "linkText"],
+        ["css=.a-spacing-base > .a-size-medium:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Weekly')]", "xpath:link"],
+        ["xpath=//div[@id='a-page']/div/div[4]/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/weekly/?ref_=bo_nb_da_secondarytab')]", "xpath:href"],
+        ["xpath=//div[4]/div/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Weekly')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca4a05b4-a83b-4599-a182-dbcebece8b05",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a0d84016-b7bc-4449-bc4f-b710bed983db",
+    "name": "5.\tVerify that user can search for movies by 2 and more genres",
+    "commands": [{
+      "id": "7a7e7627-55e3-4b0c-8108-98a85108a849",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68aa5684-4c92-47cd-862e-c1688df0c41d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dc3c197-e1b5-4f40-bedd-5b4e413de4f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop path:nth-child(2)",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7d4179f-a288-4a60-97cb-bfaa64478c69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.BoMErbIIt00tb_ZoTOWZv path:nth-child(2)",
+      "targets": [
+        ["css=.BoMErbIIt00tb_ZoTOWZv path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "afc1bb30-9eb5-4509-a64a-a7e999f0ff63",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ipc-button--core-base > .ipc-button__text",
+      "targets": [
+        ["css=.ipc-button--core-base > .ipc-button__text", "css:finder"],
+        ["xpath=//form[@id='nav-search-form']/div/div/label/div", "xpath:idRelative"],
+        ["xpath=//div/div/label/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33d02fc2-de28-4a7b-8c09-81bb5e341173",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Advanced Search",
+      "targets": [
+        ["linkText=Advanced Search", "linkText"],
+        ["css=.\\_1xTnkpad08eEWkqotpqi4r:nth-child(8)", "css:finder"],
+        ["xpath=//span[@id='navbar-search-category-select-contents']/ul/a[7]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.imdb.com/search/')])[3]", "xpath:href"],
+        ["xpath=//span/ul/a[7]", "xpath:position"],
+        ["xpath=//a[contains(.,'Advanced Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16b13c1d-244e-4c85-929e-43ee75dc72a2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Genre",
+      "targets": [
+        ["linkText=Genre", "linkText"],
+        ["css=.imdb-search-gateway__browse > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Genre')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/feature/genre')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div/div[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3295ec0-c979-4605-8c4d-e5a8730e0059",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8d948bdf-7c50-4a00-a93b-1e84aa767de0",
+    "name": "7. Verify that user can see his/hers past activities",
+    "commands": [{
+      "id": "502d4b42-be8d-4910-8204-2db03e3db3eb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a22067f4-adc3-4170-9d0e-756a73ed6cf4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44aa2c77-4bba-476e-89e0-966f4951869f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ipc-icon--arrow-drop-down:nth-child(2)",
+      "targets": [
+        ["css=.ipc-icon--arrow-drop-down:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "82d79228-d726-4721-b1f1-b0f1530caf18",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Your activity",
+      "targets": [
+        ["linkText=Your activity", "linkText"],
+        ["css=.imdb-header__account-menu > .ipc-list__item:nth-child(3)", "css:finder"],
+        ["xpath=//span[@id='navUserMenu-contents']/ul/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile?ref_=nv_usr_prof_2')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/span/ul/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Your activity')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b2e49d8-4b18-4aef-b699-1486f5b02e97",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1181)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84f71ca5-1b3a-47d9-a8df-04811b234ff7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=See all 10 ratings",
+      "targets": [
+        ["linkText=See all 10 ratings", "linkText"],
+        ["css=.see-more:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'See all 10 ratings')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div/div/div/div[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/user/ur83470784/ratings')]", "xpath:href"],
+        ["xpath=//div[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See all 10 ratings')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bea19ff-5d2a-4833-900b-0fd56cb56ecb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,546)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2c9f9ad-fd42-40a9-9ee5-64101081a81b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1092)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "950b57e7-0859-4b9e-851e-6d0bd38f6977",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1638)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68ed3eca-1b65-44d2-9c5b-49454026fa23",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2184)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1733e0c-639a-4390-bb18-1aa78cf8067f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5534004d-d349-4c21-a9f5-d1d84560b24c",
+    "name": "10. Verify thet the user can clear his/her history",
+    "commands": [{
+      "id": "4e18e5ec-1b65-4c29-ae1d-e09f8808c8e4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a574ca8e-03ce-428d-8934-a61ba65889f5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bd08436-edf9-448d-bb5f-09330e4af836",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ipc-icon--arrow-drop-down:nth-child(2)",
+      "targets": [
+        ["css=.ipc-icon--arrow-drop-down:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "60c2a4e7-109f-420f-ac4f-1e2665e38023",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Your activity",
+      "targets": [
+        ["linkText=Your activity", "linkText"],
+        ["css=.imdb-header__account-menu > .ipc-list__item:nth-child(3)", "css:finder"],
+        ["xpath=//span[@id='navUserMenu-contents']/ul/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile?ref_=nv_usr_prof_2')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/span/ul/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Your activity')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6df532d9-bec1-4bdb-9f44-fda0a5b1165c",
+      "comment": "",
+      "command": "click",
+      "target": "id=clear_rvi",
+      "targets": [
+        ["id=clear_rvi", "id"],
+        ["linkText=Clear your history", "linkText"],
+        ["css=#clear_rvi", "css:finder"],
+        ["xpath=//a[contains(text(),'Clear your history')]", "xpath:link"],
+        ["xpath=//a[@id='clear_rvi']", "xpath:attributes"],
+        ["xpath=//div[@id='rvi-div']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[9]", "xpath:href"],
+        ["xpath=//body/div[2]/div/div[3]/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Clear your history')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1262df0-ae9b-48f3-8325-2f18dcea6c07",
+      "comment": "",
+      "command": "click",
+      "target": "id=clear_rvi",
+      "targets": [
+        ["id=clear_rvi", "id"],
+        ["linkText=Clear your history", "linkText"],
+        ["css=#clear_rvi", "css:finder"],
+        ["xpath=//a[contains(text(),'Clear your history')]", "xpath:link"],
+        ["xpath=//a[@id='clear_rvi']", "xpath:attributes"],
+        ["xpath=//div[@id='rvi-div']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[9]", "xpath:href"],
+        ["xpath=//body/div[2]/div/div[3]/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Clear your history')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ba10f8e-e2dc-4b60-8551-ef5a9b1d6e40",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item:nth-child(5) img",
+      "targets": [
+        ["css=.item:nth-child(5) img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX105_CR0,0,105,153_.jpg')]", "xpath:img"],
+        ["xpath=//div[@id='main']/div[2]/div/div/div/div[5]/a/img", "xpath:idRelative"],
+        ["xpath=//div[5]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a136ec03-6701-4d77-801d-50e7c914d3c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rec_selected > a > .loadlate",
+      "targets": [
+        ["css=.rec_selected > a > .loadlate", "css:finder"],
+        ["xpath=//img[@alt='Лет изнад кукавичјег гнезда']", "xpath:img"],
+        ["xpath=//div[@id='title_recs']/div/div/div[2]/div/div[3]/a/img", "xpath:idRelative"],
+        ["xpath=//div[3]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77fa214d-f41b-4e62-ad77-8333ddb58373",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rec_selected > a > .loadlate",
+      "targets": [
+        ["css=.rec_selected > a > .loadlate", "css:finder"],
+        ["xpath=//img[@alt='Мрачни витез']", "xpath:img"],
+        ["xpath=//div[@id='title_recs']/div/div/div[2]/div/div[6]/a/img", "xpath:idRelative"],
+        ["xpath=//div[6]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "533fa3b4-7ea7-4860-b052-44bf6f4e0671",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rec_selected > a > .loadlate",
+      "targets": [
+        ["css=.rec_selected > a > .loadlate", "css:finder"],
+        ["xpath=//img[@alt='Успон Мрачног витеза']", "xpath:img"],
+        ["xpath=//div[@id='title_recs']/div/div/div[2]/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bca2b40d-c032-48cf-a4fb-9c16583ab5c0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rec_overview:nth-child(1) .rec-jaw-upper b",
+      "targets": [
+        ["css=.rec_overview:nth-child(1) .rec-jaw-upper b", "css:finder"],
+        ["xpath=//div[@id='title_recs']/div[2]/div/div[3]/div/div/div/a/b", "xpath:idRelative"],
+        ["xpath=//a/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Успон Мрачног витеза')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "efd8f863-3fbe-469a-ac73-8885541dae71",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar__user-menu-toggle__name",
+      "targets": [
+        ["css=.navbar__user-menu-toggle__name", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/div/label[2]/div/span", "xpath:idRelative"],
+        ["xpath=//label[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Hristina')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eda19bb0-9f5a-452f-adfc-2a1871fbd193",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Your activity",
+      "targets": [
+        ["linkText=Your activity", "linkText"],
+        ["css=.imdb-header__account-menu > .ipc-list__item:nth-child(3)", "css:finder"],
+        ["xpath=//span[@id='navUserMenu-contents']/ul/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile?ref_=nv_usr_prof_2')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/span/ul/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Your activity')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5a5bced-899b-4c6e-946a-e1732bbc36bb",
+      "comment": "",
+      "command": "click",
+      "target": "id=clear_rvi",
+      "targets": [
+        ["id=clear_rvi", "id"],
+        ["linkText=Clear your history", "linkText"],
+        ["css=#clear_rvi", "css:finder"],
+        ["xpath=//a[contains(text(),'Clear your history')]", "xpath:link"],
+        ["xpath=//a[@id='clear_rvi']", "xpath:attributes"],
+        ["xpath=//div[@id='rvi-div']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[9]", "xpath:href"],
+        ["xpath=//body/div[2]/div/div[3]/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Clear your history')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bacf4683-6e14-427c-99e0-ade751ca2248",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a40aaf13-2c82-4866-a2f3-f28423db9fd1",
+    "name": "11. Verify that user can search movies by typing in the Searchbox",
+    "commands": [{
+      "id": "aff45892-58b4-4592-94b2-d977d6ce304f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "904e759a-6c0d-40f3-8862-70c9eb049774",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebc1ab25-6fb1-403b-8c3c-b7ad29480313",
+      "comment": "",
+      "command": "type",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "007"
+    }, {
+      "id": "60795f66-8ce6-4cd9-8347-c9f976a9d29e",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "7aa00d65-b9ed-4fad-bd3a-ec5bd64598ea",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Зрно утехе",
+      "targets": [
+        ["linkText=Зрно утехе", "linkText"],
+        ["css=.findSection:nth-child(3) .odd > .result_text > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Зрно утехе')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div[2]/table/tbody/tr/td[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/title/tt0830515/?ref_=fn_al_tt_1')])[2]", "xpath:href"],
+        ["xpath=//td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Зрно утехе')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e294c8e8-eda8-4c85-b5cf-cbe1a531e973",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7c433f8e-527a-4173-8a70-8382fc07eec9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["56a8b531-58a6-4480-a4ea-07e44d3f98c9"]
+  }],
+  "urls": ["https://www.imdb.com/"],
+  "plugins": []
+}

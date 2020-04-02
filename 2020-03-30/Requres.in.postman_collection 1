@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "71746e4b-ada7-4f9f-8abf-300e76091d57",
+		"name": "Requres.in",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get  Method",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Method",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b2f9015-22ac-4755-a8a0-6513152ba12d",
+						"exec": [
+							"pm.test(\"Status code is 200\",function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{requres site}}api/users/2",
+					"host": [
+						"{{requres site}}api"
+					],
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Method",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "889a2354-2085-4bdb-a79e-8b36aa0610da",
+						"exec": [
+							"pm.test(\"Status code is 201\",function() {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{requres site}}api/users",
+					"host": [
+						"{{requres site}}api"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
